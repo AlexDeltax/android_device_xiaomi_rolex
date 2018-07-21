@@ -43,19 +43,16 @@ PRODUCT_COPY_FILES += \
 	$(TOPDIR)frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:/$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
 	$(TOPDIR)frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:/$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
 
+
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
-    af.fast_track_multiplier=2 \
     audio.deep_buffer.media=true \
-    audio.offload.disable=true \
     audio.offload.min.duration.secs=30 \
     audio.offload.video=true \
     persist.vendor.audio.fluence.voicecall=true \
-    persist.vendor.audio.fluence.voicerec=true \
     persist.vendor.audio.fluence.speaker=true \
     persist.vendor.audio.speaker.prot.enable=false \
     ro.vendor.audio.sdk.ssr=false \
-    ro.vendor.audio.sdk.fluencetype=fluence \
     audio.parser.ip.buffer.size=262144 \
     vendor.audio_hal.period_size=192 \
     vendor.audio.tunnel.encode=false \
@@ -69,11 +66,40 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.offload.multiple.enabled=false \
     vendor.audio.safx.pbe.enabled=true \
     vendor.audio.pp.asphere.enabled=false \
-    vendor.audio.dolby.ds2.enabled=true \
-    vendor.audio.dolby.ds2.hardbypass=true \
     vendor.audio.offload.multiaac.enable=true \
     vendor.audio.flac.sw.decoder.24bit=true \
     vendor.voice.playback.conc.disabled=true \
     vendor.voice.record.conc.disabled=false \
     vendor.voice.voip.conc.disabled=true \
     vendor.voice.conc.fallbackpath=deep-buffer
+
+# Properties modified
+PRODUCT_PROPERTY_OVERRIDES += \
+    af.fast_track_multiplier=1 \
+    audio.offload.disable=false \
+    vendor.audio.dolby.ds2.hardbypass=false \
+    ro.vendor.audio.sdk.fluencetype=none \
+    persist.vendor.audio.fluence.voicerec=false \
+    vendor.audio.dolby.ds2.enabled=false
+
+# Properties added
+PRODUCT_PROPERTY_OVERRIDES += \
+    audio.offload.track.enable=true \
+    audio.offload.buffer.size.kb=64 \
+    audio.offload.pcm.16bit.enable=true \
+    audio.offload.pcm.24bit.enable=true \
+    audio.offload.multiple.enabled=false \
+    persist.audio.dirac.speaker=true \
+    ro.qc.sdk.audio.fluencetype=fluence \
+    persist.audio.fluence.mode=endfire \
+    persist.audio.fluence.voicecall=true \
+    persist.audio.fluence.voicerec=false \
+    persist.audio.fluence.speaker=true \
+    persist.vendor.bt.enable.splita2dp=false \
+    ro.audio.hifi=true \
+    persist.audio.hifi=false \
+    persist.audio.hifi.volume=73 \
+    tunnel.audio.encode=false \
+    vendor.audio.offload.passthrough=false \
+    vendor.audio.hw.aac.encoder=true \
+    vendor.audio.parser.ip.buffer.size=262144
