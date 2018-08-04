@@ -53,6 +53,12 @@ def ImportMainBootloaderFirmware(info):
           package_extract_file("install/firmware-update/riva/NON-HLOS.bin", "/dev/block/bootdevice/by-name/modem");\n\
           package_extract_file("install/firmware-update/riva/adspso.bin", "/dev/block/bootdevice/by-name/dsp");\n\
           package_extract_file("install/firmware-update/riva/mdtp.img", "/dev/block/bootdevice/by-name/mdtp");\n\
+          ui_print("Patches for riva");\n\
+          run_program("/sbin/busybox", "mount", "/vendor");\n\
+          package_extract_dir("install/patch/riva/vendor", "/vendor");\n\
+          set_perm(0, 0, 0644, "/vendor/etc/mixer_paths_qrd_sku1.xml");\n\
+          set_perm(0, 0, 0644, "/vendor/etc/mixer_paths_qrd_sku2.xml");\n\
+          run_program("/sbin/busybox", "umount", "/vendor");\n\
         )\n\
     );\n\
   ')
@@ -86,6 +92,12 @@ def ImportBkpBootloaderFirmware(info):
           package_extract_file("install/firmware-update/riva/devcfg.mbn", "/dev/block/bootdevice/by-name/devcfg");\n\
           package_extract_file("install/firmware-update/riva/keymaster.mbn", "/dev/block/bootdevice/by-name/keymaster");\n\
           package_extract_file("install/firmware-update/riva/mdtp.img", "/dev/block/bootdevice/by-name/mdtp");\n\
+          ui_print("Patches for riva");\n\
+          run_program("/sbin/busybox", "mount", "/vendor");\n\
+          package_extract_dir("install/patch/riva/vendor", "/vendor");\n\
+          set_perm(0, 0, 0644, "/vendor/etc/mixer_paths_qrd_sku1.xml");\n\
+          set_perm(0, 0, 0644, "/vendor/etc/mixer_paths_qrd_sku2.xml");\n\
+          run_program("/sbin/busybox", "umount", "/vendor");\n\
         )\n\
     );\n\
   ')
