@@ -26,7 +26,7 @@ def ImportMainBootloaderFirmware(info):
     ifelse(\n\
         getprop("ro.product.device") == "rolex", \n\
         (\n\
-          ui_print("Flashing MIUI AM V8.7.19 Firmware for rolex");\n\
+          ui_print("Flashing MIUI V8.8.2 Global Dev Firmware for rolex");\n\
           package_extract_file("install/firmware-update/rolex/cmnlib64.mbn", "/dev/block/bootdevice/by-name/cmnlib64");\n\
           package_extract_file("install/firmware-update/rolex/cmnlib.mbn", "/dev/block/bootdevice/by-name/cmnlib");\n\
           package_extract_file("install/firmware-update/rolex/rpm.mbn", "/dev/block/bootdevice/by-name/rpm");\n\
@@ -40,7 +40,7 @@ def ImportMainBootloaderFirmware(info):
           package_extract_file("install/firmware-update/rolex/adspso.bin", "/dev/block/bootdevice/by-name/dsp");\n\
         ),\n\
         ( \n\
-          ui_print("Flashing MIUI AM V8.7.19 Firmware for riva");\n\
+          ui_print("Flashing MIUI V8.8.2 Global Dev Firmware for riva");\n\
           package_extract_file("install/firmware-update/riva/cmnlib64.mbn", "/dev/block/bootdevice/by-name/cmnlib64");\n\
           package_extract_file("install/firmware-update/riva/cmnlib.mbn", "/dev/block/bootdevice/by-name/cmnlib");\n\
           package_extract_file("install/firmware-update/riva/rpm.mbn", "/dev/block/bootdevice/by-name/rpm");\n\
@@ -68,7 +68,7 @@ def ImportBkpBootloaderFirmware(info):
     ifelse(\n\
         getprop("ro.product.device") == "rolex", \n\
         (\n\
-          ui_print("Flashing MIUI AM V8.7.19 Firmware for rolex");\n\
+          ui_print("Flashing MIUI V8.8.2 Global Dev Firmware for rolex");\n\
           package_extract_file("install/firmware-update/rolex/cmnlib64.mbn", "/dev/block/bootdevice/by-name/cmnlib64");\n\
           package_extract_file("install/firmware-update/rolex/cmnlib.mbn", "/dev/block/bootdevice/by-name/cmnlib");\n\
           package_extract_file("install/firmware-update/rolex/rpm.mbn", "/dev/block/bootdevice/by-name/rpm");\n\
@@ -81,7 +81,7 @@ def ImportBkpBootloaderFirmware(info):
           ui_print("Flashing Done.");\n\
         ),\n\
         ( \n\
-          ui_print("Flashing MIUI AM V8.7.19 Firmware for riva");\n\
+          ui_print("Flashing MIUI V8.8.2 Global Dev Firmware for riva");\n\
           package_extract_file("install/firmware-update/riva/cmnlib64.mbn", "/dev/block/bootdevice/by-name/cmnlib64");\n\
           package_extract_file("install/firmware-update/riva/cmnlib.mbn", "/dev/block/bootdevice/by-name/cmnlib");\n\
           package_extract_file("install/firmware-update/riva/rpm.mbn", "/dev/block/bootdevice/by-name/rpm");\n\
