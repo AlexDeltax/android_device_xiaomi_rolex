@@ -56,8 +56,6 @@ def ImportMainBootloaderFirmware(info):
           ui_print("Patches for riva");\n\
           run_program("/sbin/busybox", "mount", "/vendor");\n\
           package_extract_dir("install/patch/riva/vendor", "/vendor");\n\
-          set_perm(0, 0, 0644, "/vendor/etc/mixer_paths_qrd_sku1.xml");\n\
-          set_perm(0, 0, 0644, "/vendor/etc/mixer_paths_qrd_sku2.xml");\n\
           run_program("/sbin/busybox", "umount", "/vendor");\n\
         )\n\
     );\n\
@@ -95,8 +93,6 @@ def ImportBkpBootloaderFirmware(info):
           ui_print("Patches for riva");\n\
           run_program("/sbin/busybox", "mount", "/vendor");\n\
           package_extract_dir("install/patch/riva/vendor", "/vendor");\n\
-          set_perm(0, 0, 0644, "/vendor/etc/mixer_paths_qrd_sku1.xml");\n\
-          set_perm(0, 0, 0644, "/vendor/etc/mixer_paths_qrd_sku2.xml");\n\
           run_program("/sbin/busybox", "umount", "/vendor");\n\
         )\n\
     );\n\
