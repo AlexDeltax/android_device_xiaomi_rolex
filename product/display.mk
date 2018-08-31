@@ -11,10 +11,6 @@ PRODUCT_AAPT_PREF_CONFIG := xhdpi
 # A list of dpis to select prebuilt apk, in precedence order.
 PRODUCT_AAPT_PREBUILT_DPI := hdpi
 
-# Ambient display
-PRODUCT_PACKAGES += \
-    XiaomiDoze
-
 # Display
 PRODUCT_PACKAGES += \
     copybit.msm8937 \
