@@ -46,7 +46,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     media.aac_51_output_enabled=true \
     media.stagefright.audio.sink=280 \
     av.debug.disable.pers.cache=1 \
-    vidc.enc.narrow.searchrange=1 \
     drm.service.enabled=true \
     vidc.disable.split.mode=1 \
     vendor.audio.hw.aac.encoder=true \
