@@ -25,6 +25,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@1.0-service-sdm
 
+# Ambient display
+PRODUCT_PACKAGES += \
+    XiaomiDoze
+
+
 # Display HAL
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
