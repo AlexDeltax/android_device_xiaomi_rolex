@@ -17,6 +17,7 @@
 
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
+#define BTM_DEF_LOCAL_NAME   "Xiaomi Redmi 4A"
 
 #define BTA_SKIP_BLE_READ_REMOTE_FEAT FALSE
 #define MAX_ACL_CONNECTIONS    7
@@ -29,4 +30,10 @@
 #define BTM_SCO_ENHANCED_SYNC_ENABLED FALSE
 #define BTM_WBS_INCLUDED TRUE
 #define BTIF_HF_WBS_PREFERRED TRUE
+
+/* Increasing SEPs to 12 from 6 to support SHO/MCast i.e. two streams per codec */
+#define AVDT_NUM_SEPS 12
+
+/* Enable HFP WBS feature */
+#define BTIF_HF_CLIENT_WBS_INCLUDED TRUE
 #endif
