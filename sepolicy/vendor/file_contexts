@@ -26,6 +26,3 @@
 
 # Ir
 /dev/lirc[0-9]*                 u:object_r:lirc_device:s0
-
-# Light HAL
-/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.xiaomi_8917 u:object_r:hal_light_default_exec:s0
