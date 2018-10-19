@@ -23,7 +23,7 @@ def FullOTA_InstallEnd(info):
 
 def ImportMainBootloaderFirmware(info):
   info.script.AppendExtra('\
-    ui_print("Flashing MIUI V8.9.13 Global Dev Firmware");\n\
+    ui_print("Flashing MIUI HM4AGlobal V9.6.5.0.NCCMIFD Firmware.");\n\
     package_extract_file("install/firmware-update/cmnlib64.mbn", "/dev/block/bootdevice/by-name/cmnlib64");\n\
     package_extract_file("install/firmware-update/cmnlib.mbn", "/dev/block/bootdevice/by-name/cmnlib");\n\
     package_extract_file("install/firmware-update/rpm.mbn", "/dev/block/bootdevice/by-name/rpm");\n\
@@ -35,12 +35,13 @@ def ImportMainBootloaderFirmware(info):
     package_extract_file("install/firmware-update/keymaster.mbn", "/dev/block/bootdevice/by-name/keymaster");\n\
     package_extract_file("install/firmware-update/NON-HLOS.bin", "/dev/block/bootdevice/by-name/modem");\n\
     package_extract_file("install/firmware-update/adspso.bin", "/dev/block/bootdevice/by-name/dsp");\n\
+    package_extract_file("install/firmware-update/splash.img", "/dev/block/bootdevice/by-name/splash");\n\
   ')
 
 def ImportBkpBootloaderFirmware(info):
   info.script.AppendExtra('\
-    ui_print("Flashing MIUI V8.9.13 Global Dev Firmware");\n\
-    package_extract_file("install/firmware-update/cmnlib64.mbn", "/dev/block/bootdevice/by-name/cmnlib64");\n\
+    ui_print("Flashing Backup MIUI HM4AGlobal V9.6.5.0.NCCMIFD Firmware.");\n\
+    package_extract_file("install/firmware-update/cmnlib64.mbn", "/dev/block/bootdevice/by-name/cmnlib64bak");\n\
     package_extract_file("install/firmware-update/cmnlib.mbn", "/dev/block/bootdevice/by-name/cmnlib");\n\
     package_extract_file("install/firmware-update/rpm.mbn", "/dev/block/bootdevice/by-name/rpm");\n\
     package_extract_file("install/firmware-update/tz.mbn", "/dev/block/bootdevice/by-name/tz");\n\
