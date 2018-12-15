@@ -23,7 +23,7 @@ def FullOTA_InstallEnd(info):
 
 def ImportMainBootloaderFirmware(info):
   info.script.AppendExtra('\
-    ui_print("Flashing MIUI HM4AGlobal V9.6.5.0.NCCMIFD Firmware.");\n\
+    ui_print("Flashing MIUI HM4AGlobal_V10.1.1.0.NCCMIFI Firmware.");\n\
     package_extract_file("install/firmware-update/cmnlib64.mbn", "/dev/block/bootdevice/by-name/cmnlib64");\n\
     package_extract_file("install/firmware-update/cmnlib.mbn", "/dev/block/bootdevice/by-name/cmnlib");\n\
     package_extract_file("install/firmware-update/rpm.mbn", "/dev/block/bootdevice/by-name/rpm");\n\
@@ -40,7 +40,7 @@ def ImportMainBootloaderFirmware(info):
 
 def ImportBkpBootloaderFirmware(info):
   info.script.AppendExtra('\
-    ui_print("Flashing Backup MIUI HM4AGlobal V9.6.5.0.NCCMIFD Firmware.");\n\
+    ui_print("Flashing Backup MIUI HM4AGlobal_V10.1.1.0.NCCMIFI Firmware.");\n\
     package_extract_file("install/firmware-update/cmnlib64.mbn", "/dev/block/bootdevice/by-name/cmnlib64bak");\n\
     package_extract_file("install/firmware-update/cmnlib.mbn", "/dev/block/bootdevice/by-name/cmnlib");\n\
     package_extract_file("install/firmware-update/rpm.mbn", "/dev/block/bootdevice/by-name/rpm");\n\
