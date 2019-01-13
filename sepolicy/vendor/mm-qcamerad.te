@@ -1,2 +1,0 @@
-type_transition mm-qcamerad system_data_file:sock_file camera_socket "cam_socket1";
-type_transition mm-qcamerad system_data_file:sock_file camera_socket "cam_socket2";
