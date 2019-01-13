@@ -304,6 +304,13 @@ service hciattach /vendor/bin/hci_qcomm_init -e
     disabled
     oneshot
 
+service perfd /vendor/bin/perfd
+    class late_start
+    user root
+    group root
+    socket perfd seqpacket 0666 root system
+    writepid /dev/cpuset/system-background/tasks
+
 on property:vendor.bluetooth.hciattach=true
     start hciattach
     setprop vendor.bluetooth.status on
