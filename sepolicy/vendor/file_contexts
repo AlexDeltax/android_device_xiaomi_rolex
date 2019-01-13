@@ -23,6 +23,3 @@
 /sys/devices/soc/leds-qpnp-[0-9]+/leds(/.*)?                    u:object_r:sysfs_leds:s0
 /sys/devices/soc/[a-z0-9]+\.sdhci/leds(/.*)?                    u:object_r:sysfs_leds:s0
 /sys/devices/soc/soc:gpio-leds/leds(/.*)?                       u:object_r:sysfs_leds:s0
-
-# HALs
-/vendor/bin/hw/android\.hardware\.ir@1\.0-service.xiaomi_8937       u:object_r:hal_ir_default_exec:s0
