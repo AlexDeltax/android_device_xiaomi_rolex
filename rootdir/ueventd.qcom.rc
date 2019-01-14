@@ -267,6 +267,4 @@
 
 # lirc
 /dev/lirc0                0660   system     system
-
-# peel ir nodes
-/dev/peel_ir                 0660   system       system
+/dev/peel_ir              0660   system     system
