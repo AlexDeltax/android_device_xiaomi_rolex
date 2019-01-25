@@ -2002,8 +2002,9 @@ vendor/lib64/libcneqmiutils.so|4ca2efde2bcdd4586928c018113727c570ad6e7e
 vendor/lib64/libwqe.so|cbe62a479ce7441bc7b846a5df91f3edee1f91df
 vendor/lib64/libxml.so|470cacf4ad8f23040286be15a08f1e6ccbd35f22
 
-# Consumer Ir - from tissot - OPM1.171019.019
-vendor/lib64/hw/consumerir.default.so|3626a89b5704e90e3b665d19b14c2eaddda2a763
+# Consumer IR - from MIUI Stable - V9.2.6.0.NCCMIEK
+vendor/lib/hw/consumerir.default.so:vendor/lib/hw/consumerir.default.so
+vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.default.so
 
 # Display calibration
 -etc/qdcm_calib_data_hx8394F_HD720p_video_BOE_c3a.xml
